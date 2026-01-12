@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Media Bio Formatter | Bio Architect</title>
+  <meta name="description" content="Free Instagram and TikTok bio formatter with line breaks, stylish fonts, live preview, and one-click copy. Design the perfect social media bio before you paste it." />
+  <link rel="canonical" href="https://your-domain.example/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="instagram bio formatter, tiktok bio, bio formatter, line breaks, fancy fonts, copy paste bio" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Social Media Bio Formatter | Bio Architect" />
+  <meta property="og:description" content="Free Instagram & TikTok bio formatter — line breaks, stylish fonts, live preview, and one-click copy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example/" />
+  <meta property="og:image" content="https://your-domain.example/og-image.png" />
+  <meta property="og:site_name" content="Bio Architect" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@your_twitter_handle" />
+  <meta name="twitter:title" content="Social Media Bio Formatter | Bio Architect" />
+  <meta name="twitter:description" content="Free Instagram & TikTok bio formatter — line breaks, stylish fonts, live preview, and one-click copy." />
+  <meta name="twitter:image" content="https://your-domain.example/og-image.png" />
+
+  <!-- Structured data: WebSite (replace URLs with your real site) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Bio Architect",
+    "url": "https://your-domain.example/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://your-domain.example/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    }
+    .phone-frame {
+      border-radius: 2.5rem;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.4);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at top, #1f2937, #020617);
+    }
+    .bio-pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .insta-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .tiktok-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .scrollbars-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scrollbars-thin::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.7);
+      border-radius: 999px;
+    }
+    .gradient-border {
+      position: relative;
+    }
+    .gradient-border::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(120deg, #ecfeff, #a855f7, #fb7185);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      pointer-events: none;
+    }
+    .badge-pill {
+      border-radius: 999px;
+      font-size: 0.7rem;
+      padding: 0.1rem 0.45rem;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-50 min-h-screen">
+  <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-pink-500 via-purple-500 to-cyan-400 flex items-center justify-center text-xs font-bold tracking-tight shadow-lg shadow-pink-500/40">
+          BA
+        </div>
+        <div>
+          <div class="text-sm font-semibold tracking-tight">Bio Architect</div>
+          <p class="text-[11px] text-slate-400 leading-tight">Social Media Bio Formatter Sandbox</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-4 text-xs text-slate-300">
+        <a href="#how-it-works" class="hover:text-white">How it works</a>
+        <a href="#seo" class="hover:text-white">SEO strategy</a>
+        <a href="#monetization" class="hover:text-white">Monetization</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 pt-8 pb-16">
+    <section class="grid lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-8 lg:gap-10 items-start">
+      <!-- Left: editor + sidebar tools -->
+      <div class="space-y-4">
+        <div class="mb-2">
+          <h1 class="text-2xl md:text-3xl font-semibold tracking-tight mb-1">Social Media Bio Formatter</h1>
+          <p class="text-sm text-slate-300 max-w-xl">Design the perfect Instagram, TikTok, or X bio with line breaks, stylish fonts, and live mobile previews. What you see here is what you paste there.</p>
+        </div>
+
+        <div class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] gap-4 items-start">
+          <!-- Drafting Area -->
+          <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-3.5 space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-medium text-slate-200">Drafting Area</span>
+                <span class="badge-pill bg-emerald-500/10 text-emerald-300 border border-emerald-400/30 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  Auto-save
+                </span>
+              </div>
+              <div class="flex items-center gap-2 text-[11px] text-slate-400">
+                <span>Limit: 150 chars</span>
+                <button id="clearDraft" class="px-2 py-0.5 border border-slate-600/70 rounded-full hover:bg-slate-800/80 text-[10px]">Clear</button>
+              </div>
+            </div>
+            <textarea id="bioInput" class="w-full h-40 md:h-44 text-sm rounded-xl bg-slate-950/70 border border-slate-800 focus:border-purple-500/60 outline-none px-3 py-2.5 text-slate-50 placeholder:text-slate-500 resize-none scrollbars-thin" placeholder="Type your bio here...&#10;Tip: Use the tools on the right for fonts and invisible line breaks."></textarea>
+
+            <div class="space-y-2">
+              <div class="flex items-center justify-between gap-3 text-[11px]">
+                <div class="flex items-center gap-1.5 text-slate-400">
+                  <span id="charCount">0</span>
+                  <span>/ 150 characters</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <button id="insertInvisible" class="px-2 py-0.5 rounded-full bg-slate-800 hover:bg-slate-700 text-[11px] border border-slate-600/70" type="button">Insert invisible line break</button>
+                  <span class="text-[10px] text-slate-500 hidden md:inline">(For Instagram line breaks)</span>
+                </div>
+              </div>
+              <div class="w-full h-1.5 rounded-full bg-slate-800 overflow-hidden">
+                <div id="charProgress" class="h-full w-0 rounded-full bg-gradient-to-r from-emerald-400 via-amber-300 to-rose-500 transition-all"></div>
+              </div>
+            </div>
+
+            <button id="copyButton" type="button" class="w-full mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 text-sm font-medium py-2.5 shadow-lg shadow-pink-500/40 hover:brightness-110 active:brightness-95">
+              <span>Copy formatted bio</span>
+              <span class="text-[10px] bg-black/30 px-2 py-0.5 rounded-full border border-white/10">Watermark added (you can delete it)</span>
+            </button>
+            <p id="copyStatus" class="text-[11px] text-emerald-300 mt-1 hidden">Copied to clipboard with watermark.</p>
+          </div>
+
+          <!-- Sidebar tools -->
+          <aside class="space-y-3">
+            <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-3.5 space-y-2.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-xs font-medium text-slate-100">Font Transformer</span>
+                <span class="text-[10px] text-slate-400">100% Unicode – no images</span>
+              </div>
+
+              <div class="space-y-1.5">
+                <label class="block text-[11px] text-slate-400" for="transformSample">Transform a snippet</label>
+                <input id="transformSample" type="text" class="w-full px-2.5 py-1.5 rounded-lg bg-slate-950/70 border border-slate-800 text-xs placeholder:text-slate-500 focus:border-purple-500/60 outline-none" placeholder="e.g. Digital creator • Fitness • Travel" />
+              </div>
+
+              <div class="grid grid-cols-3 gap-1.5 text-[11px]">
+                <button data-style="cursive" class="fontStyleBtn px-2 py-1 rounded-lg border border-slate-700 bg-slate-900/80 hover:border-purple-400/70">𝓒𝓾𝓻𝓼𝓲𝓿𝓮</button>
+                <button data-style="bold" class="fontStyleBtn px-2 py-1 rounded-lg border border-slate-700 bg-slate-900/80 hover:border-purple-400/70">𝗕𝗼𝗹𝗱</button>
+                <button data-style="monospace" class="fontStyleBtn px-2 py-1 rounded-lg border border-slate-700 bg-slate-900/80 hover:border-purple-400/70">𝚂𝚚𝚞𝚊𝚛𝚎</button>
+              </div>
+
+              <div class="space-y-1.5">
+                <label class="block text-[11px] text-slate-400">Result (click to copy)</label>
+                <div id="transformResult" class="min-h-[2.25rem] text-xs px-2.5 py-1.5 rounded-lg bg-slate-950/70 border border-dashed border-slate-700 flex items-center text-slate-200 cursor-pointer select-text"></div>
+                <p id="transformStatus" class="text-[10px] text-emerald-300 hidden">Transformed text copied to clipboard.</p>
+              </div>
+
+              <button id="applyToDraft" type="button" class="w-full text-[11px] mt-1 px-2.5 py-1.5 rounded-lg border border-purple-500/60 text-purple-100 bg-purple-500/10 hover:bg-purple-500/20">Apply transformed text to main bio</button>
+            </div>
+
+            <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-3 space-y-1.5 text-[11px] text-slate-300 leading-snug">
+              <div class="flex items-center gap-1.5 text-xs font-medium text-slate-100">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                Tips
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Use invisible line breaks to avoid Instagram collapsing your spacing.</li>
+                <li>Stay under 150 characters for Instagram bios – the bar turns red when you go over.</li>
+                <li>Mix normal and stylish fonts for readability and flair.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Right: phone previews -->
+      <div class="space-y-3">
+        <div class="flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2 text-xs">
+            <button id="previewInstagram" class="previewTab inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-pink-500/70 text-pink-100 bg-pink-500/10">
+              <span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
+              Instagram preview
+            </button>
+            <button id="previewTikTok" class="previewTab inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-slate-700 text-slate-300 bg-slate-900/70">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
+              TikTok preview
+            </button>
+          </div>
+          <span class="text-[11px] text-slate-400">Live WYSIWYG mobile mockup</span>
+        </div>
+
+        <div class="phone-frame mx-auto max-w-xs aspect-[9/19] px-3.5 pt-4 pb-5 gradient-border">
+          <div class="relative h-full w-full rounded-[2rem] bg-slate-950 overflow-hidden flex flex-col text-[11px] text-slate-100">
+            <div class="absolute inset-x-16 top-0 h-5 bg-slate-900/90 rounded-b-3xl"></div>
+
+            <!-- Top bar -->
+            <div class="flex items-center justify-between px-3 pt-6 pb-2 text-[10px] text-slate-300 border-b border-slate-800/80 bg-slate-950/90">
+              <div class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span id="mockUsername" class="font-semibold">@your.handle</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="w-1 h-1 rounded-full bg-slate-400"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+              </div>
+            </div>
+
+            <!-- Content area -->
+            <div class="flex-1 overflow-hidden bg-slate-950">
+              <!-- Instagram layout -->
+              <div id="instagramView" class="h-full flex flex-col">
+                <div class="px-3 pt-3 flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-300 p-[2px]">
+                    <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-[9px]">IMG</div>
+                  </div>
+                  <div class="flex-1 flex items-center justify-between text-[10px] text-slate-200">
+                    <div>
+                      <div class="insta-name">your.handle</div>
+                      <div class="text-slate-400">Creator • Personal blog</div>
+                    </div>
+                    <button class="px-2 py-1 rounded-lg bg-slate-200 text-slate-900 font-semibold text-[10px]">Follow</button>
+                  </div>
+                </div>
+
+                <div class="px-3 pt-2 flex gap-6 text-[10px] text-slate-200">
+                  <div class="flex flex-col">
+                    <span class="font-semibold">1,234</span>
+                    <span class="text-slate-400">Posts</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-semibold">8,567</span>
+                    <span class="text-slate-400">Followers</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-semibold">321</span>
+                    <span class="text-slate-400">Following</span>
+                  </div>
+                </div>
+
+                <div class="px-3 pt-2 pb-3 flex-1 overflow-auto scrollbars-thin">
+                  <div class="insta-name mb-0.5">Your Name ✨</div>
+                  <pre id="instagramBio" class="bio-pre text-[11px] text-slate-100 leading-snug"></pre>
+                </div>
+              </div>
+
+              <!-- TikTok layout -->
+              <div id="tiktokView" class="h-full hidden flex-col">
+                <div class="px-3 pt-3 flex items-start gap-3">
+                  <div class="w-11 h-11 rounded-full bg-slate-800 flex items-center justify-center text-[9px]">TT</div>
+                  <div class="flex-1">
+                    <div class="tiktok-name">your.handle</div>
+                    <div class="text-[10px] text-slate-400 mb-0.5">1.2M followers · 24.5M likes</div>
+                    <pre id="tiktokBio" class="bio-pre text-[11px] text-slate-100 leading-snug"></pre>
+                    <button class="mt-2 px-3 py-1.5 rounded-full bg-slate-100 text-slate-950 text-[10px] font-semibold">Follow</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-[11px] text-slate-400 leading-relaxed">
+          This preview is an approximation. Each platform may render emojis and fonts slightly differently, but line breaks, spacing, and character length will closely match what you see here.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEO & Monetization content -->
+    <section id="how-it-works" class="mt-12 grid md:grid-cols-3 gap-6 text-sm">
+      <div class="md:col-span-2 bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
+        <h2 class="text-base font-semibold mb-1">How the Bio Architect works</h2>
+        <p class="text-slate-300">Bio Architect is a safe sandbox for creators, influencers, and small business owners who want to perfect their social media bios before publishing them.</p>
+        <ul class="list-disc list-inside text-slate-300 space-y-1">
+          <li><span class="font-medium">Draft once, paste anywhere.</span> The editor mirrors your text into Instagram-style and TikTok-style mobile previews in real time.</li>
+          <li><span class="font-medium">Respect your line breaks.</span> Use invisible characters so Instagram and TikTok stop collapsing your spacing.</li>
+          <li><span class="font-medium">Stay on the safe side of limits.</span> A character counter and progress bar help you stay within Instagram's 150-character guideline.</li>
+          <li><span class="font-medium">Autosave built-in.</span> Your draft is stored in your browser with localStorage, so refreshes and crashes do not wipe your work.</li>
+        </ul>
+      </div>
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 text-slate-300 space-y-1.5">
+        <h3 class="text-sm font-semibold">Supported platforms</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Instagram bios (line breaks + emojis)</li>
+          <li>TikTok bios and name lines</li>
+          <li>X / Twitter profile text</li>
+          <li>Link-in-bio descriptions (Linktree, Beacons, etc.)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="seo" class="mt-10 grid md:grid-cols-3 gap-6 text-sm">
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2 md:col-span-2">
+        <h2 class="text-base font-semibold mb-1">SEO strategy: capture social media formatting searches</h2>
+        <p class="text-slate-300">People search for solutions like <strong class="font-semibold">"how to get line breaks in Instagram bio"</strong>, <strong class="font-semibold">"cool fonts for TikTok bio"</strong>, and <strong class="font-semibold">"Instagram bio spacing tool"</strong>. Bio Architect is optimized as a landing page for exactly those keywords.</p>
+        <ul class="list-disc list-inside text-slate-300 space-y-1">
+          <li>Target long-tail questions and how-to phrases in headings and copy.</li>
+          <li>Include "copy/paste" and "generator" language to match user intent.</li>
+          <li>Use internal links to guides on writing high-converting bios.</li>
+        </ul>
+      </div>
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2 text-slate-300">
+        <h3 class="text-sm font-semibold mb-1">Built for viral loops</h3>
+        <p class="text-slate-300">Every time someone copies a bio, Bio Architect adds a tiny, removable watermark line:</p>
+        <pre class="bio-pre text-[11px] bg-slate-950/80 border border-slate-800 rounded-lg px-2.5 py-1.5 text-slate-200 overflow-x-auto">Formatted with https://www.google.com/search?q=BioArchitect.com</pre>
+        <p class="text-slate-400 text-xs">Most users delete it, but some keep it – creating a natural, organic referral loop across social platforms.</p>
+      </div>
+    </section>
+
+    <section id="monetization" class="mt-10 grid md:grid-cols-3 gap-6 text-sm">
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-2">
+        <h2 class="text-base font-semibold mb-1">Monetization ideas</h2>
+        <p class="text-slate-300">Bio Architect naturally attracts creators and entrepreneurs – an audience that already spends money to grow their presence.</p>
+      </div>
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-1.5 text-slate-300">
+        <h3 class="text-sm font-semibold">1. Affiliate recommendations</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Link-in-bio tools such as Linktree, Beacons, and Koji.</li>
+          <li>Canva for profile pictures, banners, and story highlight covers.</li>
+          <li>Skillshare, Udemy, or creator bootcamps on growing social media.</li>
+        </ul>
+      </div>
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 space-y-1.5 text-slate-300">
+        <h3 class="text-sm font-semibold">2. Digital products & ad revenue</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Paid packs of ready-to-use bio templates for different niches.</li>
+          <li>Downloadable icon sets for Instagram highlight covers.</li>
+          <li>Display advertising such as Google AdSense, supported by high average time on page.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800 bg-slate-950/90 mt-8">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
+      <p>Bio Architect · Social Media Bio Formatter Sandbox · Built with pure HTML, CSS, and JavaScript.</p>
+      <p>Tip: Bookmark this page so you never lose your perfect bio.</p>
+    </div>
+  </footer>
+
+  <script>
+    const bioInput = document.getElementById('bioInput');
+    const instagramBio = document.getElementById('instagramBio');
+    const tiktokBio = document.getElementById('tiktokBio');
+    const charCount = document.getElementById('charCount');
+    const charProgress = document.getElementById('charProgress');
+    const insertInvisibleBtn = document.getElementById('insertInvisible');
+    const copyButton = document.getElementById('copyButton');
+    const copyStatus = document.getElementById('copyStatus');
+    const clearDraftBtn = document.getElementById('clearDraft');
+
+    const previewInstagramBtn = document.getElementById('previewInstagram');
+    const previewTikTokBtn = document.getElementById('previewTikTok');
+    const instagramView = document.getElementById('instagramView');
+    const tiktokView = document.getElementById('tiktokView');
+
+    const transformSample = document.getElementById('transformSample');
+    const transformResult = document.getElementById('transformResult');
+    const transformStatus = document.getElementById('transformStatus');
+    const applyToDraftBtn = document.getElementById('applyToDraft');
+    const fontStyleButtons = document.querySelectorAll('.fontStyleBtn');
+
+    const STORAGE_KEY = 'bio-architect-draft-v1';
+
+    const limits = {
+      instagram: 150
+    };
+
+    function updatePreviews(value) {
+      instagramBio.textContent = value;
+      tiktokBio.textContent = value;
+    }
+
+    function updateCharacterCounter(value) {
+      const len = [...value].length;
+      charCount.textContent = len;
+
+      const max = limits.instagram;
+      const pct = Math.min(len / max, 1) * 100;
+      charProgress.style.width = pct + '%';
+
+      if (len <= max) {
+        charProgress.style.backgroundImage = 'linear-gradient(to right, #34d399, #fde68a, #fb7185)';
+      } else {
+        charProgress.style.backgroundImage = 'linear-gradient(to right, #f97316, #ef4444, #b91c1c)';
+      }
+    }
+
+    bioInput.addEventListener('input', (e) => {
+      const value = e.target.value;
+      updatePreviews(value);
+      updateCharacterCounter(value);
+      try {
+        localStorage.setItem(STORAGE_KEY, value);
+      } catch (err) {}
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          bioInput.value = saved;
+          updatePreviews(saved);
+          updateCharacterCounter(saved);
+        }
+      } catch (err) {}
+    });
+
+    clearDraftBtn.addEventListener('click', () => {
+      bioInput.value = '';
+      updatePreviews('');
+      updateCharacterCounter('');
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+      } catch (err) {}
+    });
+
+    const INVISIBLE_BREAK = '\u2063\n';
+
+    insertInvisibleBtn.addEventListener('click', () => {
+      const el = bioInput;
+      const start = el.selectionStart;
+      const end = el.selectionEnd;
+      const value = el.value;
+      const before = value.slice(0, start);
+      const after = value.slice(end);
+      el.value = before + INVISIBLE_BREAK + after;
+      const newPos = start + INVISIBLE_BREAK.length;
+      el.setSelectionRange(newPos, newPos);
+      el.focus();
+      updatePreviews(el.value);
+      updateCharacterCounter(el.value);
+      try {
+        localStorage.setItem(STORAGE_KEY, el.value);
+      } catch (err) {}
+    });
+
+    async function copyToClipboard(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return true;
+        } catch (err) {
+          return false;
+        }
+      }
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'absolute';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        return true;
+      } catch (err) {
+        document.body.removeChild(textarea);
+        return false;
+      }
+    }
+
+    copyButton.addEventListener('click', async () => {
+      const baseText = bioInput.value || '';
+      const watermark = '\n\nFormatted with https://www.google.com/search?q=BioArchitect.com';
+      const textToCopy = baseText + watermark;
+
+      const ok = await copyToClipboard(textToCopy);
+      copyStatus.textContent = ok ? 'Copied to clipboard with watermark.' : 'Unable to copy automatically. Please select and copy manually.';
+      copyStatus.classList.remove('hidden');
+      copyStatus.classList.toggle('text-emerald-300', ok);
+      copyStatus.classList.toggle('text-amber-300', !ok);
+
+      setTimeout(() => {
+        copyStatus.classList.add('hidden');
+      }, 3000);
+    });
+
+    function activatePreview(mode) {
+      if (mode === 'instagram') {
+        instagramView.classList.remove('hidden');
+        tiktokView.classList.add('hidden');
+        previewInstagramBtn.classList.add('border-pink-500/70', 'text-pink-100', 'bg-pink-500/10');
+        previewInstagramBtn.classList.remove('border-slate-700', 'text-slate-300', 'bg-slate-900/70');
+        previewTikTokBtn.classList.add('border-slate-700', 'text-slate-300', 'bg-slate-900/70');
+        previewTikTokBtn.classList.remove('border-emerald-400/70', 'text-emerald-100', 'bg-emerald-500/10');
+      } else {
+        instagramView.classList.add('hidden');
+        tiktokView.classList.remove('hidden');
+        previewTikTokBtn.classList.add('border-emerald-400/70', 'text-emerald-100', 'bg-emerald-500/10');
+        previewTikTokBtn.classList.remove('border-slate-700', 'text-slate-300', 'bg-slate-900/70');
+        previewInstagramBtn.classList.add('border-slate-700', 'text-slate-300', 'bg-slate-900/70');
+        previewInstagramBtn.classList.remove('border-pink-500/70', 'text-pink-100', 'bg-pink-500/10');
+      }
+    }
+
+    previewInstagramBtn.addEventListener('click', () => activatePreview('instagram'));
+    previewTikTokBtn.addEventListener('click', () => activatePreview('tiktok'));
+
+    const cursiveMap = {
+      a: '𝓪', b: '𝓫', c: '𝓬', d: '𝓭', e: '𝓮', f: '𝓯', g: '𝓰', h: '𝓱', i: '𝓲', j: '𝓳', k: '𝓴', l: '𝓵', m: '𝓶', n: '𝓷', o: '𝓸', p: '𝓹', q: '𝓺', r: '𝓻', s: '𝓼', t: '𝓽', u: '𝓾', v: '𝓿', w: '𝔀', x: '𝔁', y: '𝔂', z: '𝔃',
+      A: '𝓐', B: '𝓑', C: '𝓒', D: '𝓓', E: '𝓔', F: '𝓕', G: '𝓖', H: '𝓗', I: '𝓘', J: '𝓙', K: '𝓚', L: '𝓛', M: '𝓜', N: '𝓝', O: '𝓞', P: '𝓟', Q: '𝓠', R: '𝓡', S: '𝓢', T: '𝓣', U: '𝓤', V: '𝓥', W: '𝓦', X: '𝓧', Y: '𝓨', Z: '𝓩'
+    };
+
+    const boldMap = {
+      a: '𝐚', b: '𝐛', c: '𝐜', d: '𝐝', e: '𝐞', f: '𝐟', g: '𝐠', h: '𝐡', i: '𝐢', j: '𝐣', k: '𝐤', l: '𝐥', m: '𝐦', n: '𝐧', o: '𝐨', p: '𝐩', q: '𝐪', r: '𝐫', s: '𝐬', t: '𝐭', u: '𝐮', v: '𝐯', w: '𝐰', x: '𝐱', y: '𝐲', z: '𝐳',
+      A: '𝐀', B: '𝐁', C: '𝐂', D: '𝐃', E: '𝐄', F: '𝐅', G: '𝐆', H: '𝐇', I: '𝐈', J: '𝐉', K: '𝐊', L: '𝐋', M: '𝐌', N: '𝐍', O: '𝐎', P: '𝐏', Q: '𝐐', R: '𝐑', S: '𝐒', T: '𝐓', U: '𝐔', V: '𝐕', W: '𝐖', X: '𝐗', Y: '𝐘', Z: '𝐙',
+      0: '𝟎', 1: '𝟏', 2: '𝟐', 3: '𝟑', 4: '𝟒', 5: '𝟓', 6: '𝟔', 7: '𝟕', 8: '𝟖', 9: '𝟗'
+    };
+
+    const monoMap = {
+      a: '𝚊', b: '𝚋', c: '𝚌', d: '𝚍', e: '𝚎', f: '𝚏', g: '𝚐', h: '𝚑', i: '𝚒', j: '𝚓', k: '𝚔', l: '𝚕', m: '𝚖', n: '𝚗', o: '𝚘', p: '𝚙', q: '𝚚', r: '𝚛', s: '𝚜', t: '𝚝', u: '𝚞', v: '𝚟', w: '𝚠', x: '𝚡', y: '𝚢', z: '𝚣',
+      A: '𝙰', B: '𝙱', C: '𝙲', D: '𝙳', E: '𝙴', F: '𝙵', G: '𝙶', H: '𝙷', I: '𝙸', J: '𝙹', K: '𝙺', L: '𝙻', M: '𝙼', N: '𝙽', O: '𝙾', P: '𝙿', Q: '𝚀', R: '𝚁', S: '𝚂', T: '𝚃', U: '𝚄', V: '𝚅', W: '𝚆', X: '𝚇', Y: '𝚈', Z: '𝚉',
+      0: '𝟶', 1: '𝟷', 2: '𝟸', 3: '𝟹', 4: '𝟺', 5: '𝟻', 6: '𝟼', 7: '𝟽', 8: '𝟾', 9: '𝟿'
+    };
+
+    function transformText(style, text) {
+      const map = style === 'cursive' ? cursiveMap : style === 'bold' ? boldMap : monoMap;
+      return Array.from(text).map((ch) => map[ch] || ch).join('');
+    }
+
+    fontStyleButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const style = btn.dataset.style;
+        const source = transformSample.value || bioInput.value || '';
+        if (!source) {
+          transformResult.textContent = '';
+          return;
+        }
+        const result = transformText(style, source);
+        transformResult.textContent = result;
+        transformStatus.classList.add('hidden');
+      });
+    });
+
+    transformResult.addEventListener('click', async () => {
+      const text = transformResult.textContent || '';
+      if (!text) return;
+      const ok = await copyToClipboard(text);
+      transformStatus.textContent = ok ? 'Transformed text copied to clipboard.' : 'Unable to copy automatically.';
+      transformStatus.classList.remove('hidden');
+      setTimeout(() => transformStatus.classList.add('hidden'), 2500);
+    });
+
+    applyToDraftBtn.addEventListener('click', () => {
+      const text = transformResult.textContent || '';
+      if (!text) return;
+      bioInput.value = text;
+      updatePreviews(text);
+      updateCharacterCounter(text);
+      try {
+        localStorage.setItem(STORAGE_KEY, text);
+      } catch (err) {}
+      bioInput.focus();
+      bioInput.setSelectionRange(text.length, text.length);
+    });
+
+    activatePreview('instagram');
+    updateCharacterCounter(bioInput.value || '');
+  </script>
+</body>
+</html>
